@@ -11,8 +11,9 @@
 
     <modules>
         <module>dj-service</module>
-        <module>frontend-service</module>
         <module>event-service</module>
+        <module>location-service</module>
+        <module>frontend-service</module>
         <module>registry-service</module>
         <module>frontend-service</module>
     </modules>
