@@ -1,0 +1,30 @@
+# Spring properties
+spring:
+  application:
+    name: frontend-service
+
+# Discovery Server Access
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
+
+# API Proxy configuration
+zuul:
+  routes:
+    location-service:
+      path: /locations/**
+      serviceId: location-service
+      stripPrefix: false
+    dj-service:
+      path: /djs/**
+      serviceId: dj-service
+      stripPrefix: false
+    label-service:
+      path: /labels/**
+      serviceId: label-service
+      stripPrefix: false
+    event-service:
+      path: /events/**
+      serviceId: event-service
+      stripPrefix: false
