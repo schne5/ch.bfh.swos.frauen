@@ -1,0 +1,30 @@
+registry:
+  build: ./registry-service
+  ports:
+    - "1111:1111"
+dj:
+  build: ./dj-service
+  links:
+    - registry:registry
+location:
+  build: ./location-service
+  links:
+    - registry:registry
+event:
+  build: ./event-service
+  links:
+    - registry:registry
+book-author:
+  build: ./book-author-service
+  links:
+    - registry:registry
+    - book:book-service
+    - author:author-service
+frontend:
+  build: ./frontend-service
+  links:
+    - registry:registry
+    - book:book-service
+    - author:author-service
+  ports:
+    - "8080:8080"

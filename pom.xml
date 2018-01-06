@@ -15,7 +15,6 @@
         <module>location-service</module>
         <module>frontend-service</module>
         <module>registry-service</module>
-        <module>frontend-service</module>
     </modules>
 
 
