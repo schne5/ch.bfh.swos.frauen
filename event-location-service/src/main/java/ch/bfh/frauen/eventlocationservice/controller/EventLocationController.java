@@ -7,6 +7,7 @@ import ch.bfh.frauen.eventlocationservice.model.Location;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.rest.webmvc.RepositoryLinksResource;
 import org.springframework.hateoas.Resource;
 import org.springframework.hateoas.ResourceProcessor;
@@ -41,7 +42,7 @@ public class EventLocationController implements ResourceProcessor<RepositoryLink
         eventLocation.setContact(location.getContact());
         eventLocation.setMaxPerson(location.getMaxPerson());
         eventLocation.setAddress(location.getAddress());
-        eventLocation.setEvents(eventClient.getEventsForLocation(location.getId()).getContent());
+        eventLocation.setEvents(eventClient.getEventsForLocation(id).getContent());
         LOG.info("----------- Orchestrating a Location and Event -----------");
         return new Resource<>(eventLocation);
     }
