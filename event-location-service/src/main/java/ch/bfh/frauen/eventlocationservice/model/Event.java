@@ -1,17 +1,8 @@
-package ch.bfh.frauen.event.model;
+package ch.bfh.frauen.eventlocationservice.model;
 
-import org.hibernate.annotations.GenericGenerator;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 import java.util.Date;
 
-@Entity
 public class Event {
-    @Id
-    @GeneratedValue(generator = "system-uuid")
-    @GenericGenerator(name = "system-uuid", strategy = "uuid")
     private String id;
     private String locationId;
     private String title;

@@ -20,10 +20,6 @@ zuul:
       path: /djs/**
       serviceId: dj-service
       stripPrefix: false
-    label-service:
-      path: /labels/**
-      serviceId: label-service
-      stripPrefix: false
     event-service:
       path: /events/**
       serviceId: event-service

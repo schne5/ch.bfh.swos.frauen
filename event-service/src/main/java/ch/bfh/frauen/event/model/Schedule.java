@@ -16,7 +16,7 @@ public class Schedule {
     private String id;
     @ManyToOne
     private Event event;
-    private int djId;
+    private String djId;
     private Date timeFrom;
     private Date timeTo;
 
@@ -36,11 +36,11 @@ public class Schedule {
         this.event = event;
     }
 
-    public int getDj() {
+    public String getDjId() {
         return djId;
     }
 
-    public void setDj(int djId) {
+    public void setDjId(String djId) {
         this.djId = djId;
     }
 

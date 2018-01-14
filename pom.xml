@@ -9,12 +9,20 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.9.RELEASE</version>
+        <relativePath/> <!-- lookup parent from frauen.parent.djservice.repository -->
+    </parent>
+
     <modules>
         <module>dj-service</module>
         <module>event-service</module>
         <module>location-service</module>
         <module>frontend-service</module>
         <module>registry-service</module>
+        <module>event-location-service</module>
     </modules>
 
 
