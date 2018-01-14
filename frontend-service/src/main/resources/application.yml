@@ -16,11 +16,15 @@ zuul:
       path: /locations/**
       serviceId: location-service
       stripPrefix: false
-    dj-service:
-      path: /djs/**
-      serviceId: dj-service
-      stripPrefix: false
     event-service:
       path: /events/**
       serviceId: event-service
+      stripPrefix: false
+    event-location-service:
+      path: /eventLocation/**
+      serviceId: event-location-service
+      stripPrefix: false
+    dj-service:
+      path: /djs/**
+      serviceId: dj-service
       stripPrefix: false

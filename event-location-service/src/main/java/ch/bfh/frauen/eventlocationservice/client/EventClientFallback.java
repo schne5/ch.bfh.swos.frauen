@@ -2,11 +2,12 @@ package ch.bfh.frauen.eventlocationservice.client;
 
 import ch.bfh.frauen.eventlocationservice.model.Event;
 import org.springframework.hateoas.Resources;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-
+@Component
 public class EventClientFallback implements EventClient {
     @Override
     public Resources<Event> getEvents() {

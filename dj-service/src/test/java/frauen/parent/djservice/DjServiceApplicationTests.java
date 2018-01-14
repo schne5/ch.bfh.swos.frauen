@@ -9,7 +9,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class DjServiceApplicationTests {
 
-
+	@Test
 	public void contextLoads() {
 	}
 
