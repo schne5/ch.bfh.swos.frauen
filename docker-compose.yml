@@ -14,17 +14,18 @@ event:
   build: ./event-service
   links:
     - registry:registry
-book-author:
-  build: ./book-author-service
+event-location:
+  build: ./event-location-service
   links:
     - registry:registry
-    - book:book-service
-    - author:author-service
+    - event:event-service
+    - location:location-service
 frontend:
   build: ./frontend-service
   links:
     - registry:registry
-    - book:book-service
-    - author:author-service
+    - dj:dj-service
+    - location:location-service
+    - event:event-service
   ports:
     - "8080:8080"
